@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Girlfriend? Plssss 🥺🥺🥺🥺</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: url('sunny_day.jpg') no-repeat center center/cover;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .message {
+            font-size: 3rem;
+            font-weight: bold;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .message span {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .message span:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #000;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            white-space: nowrap;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        button {
+            font-size: 1.5rem;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .yes-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .no-btn {
+            background-color: #f44336;
+            color: white;
+        }
+
+        #pleading-message {
+            display: none;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #000;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="message">
+            Will You<span data-tooltip="Chutki">*</span> Be My<span data-tooltip="Abir">*</span> Girlfriend? Plsss🥺🥺🥺
+        </div>
+        <div class="buttons">
+            <button class="yes-btn" onclick="handleYes()">Yes</button>
+            <button class="no-btn" onclick="handleNo()">No</button>
+        </div>
+    </div>
+    <div id="pleading-message">Pleaseee say yes! I'm begging! 🙏</div>
+
+    <script>
+        let pleadingMessages = [
+            "Pleaseee say yes! I'm begging! 🙏",
+            "Amay erom bhabe na bolte parli toh?🥺",
+            "You're my sunshine, don't leave me in the rain! 🌞🌧️",
+            "Khuuuuuub dukkho dichhis amay 😭"
+        ];
+        let messageIndex = 0;
+
+        function handleYes() {
+            document.body.style.background = "url('rose_field.jpg') no-repeat center center/cover";
+            document.querySelector('.message').innerText = "I love youu hunnyyy mwahhhh 🤗😘💕🌷";
+            document.querySelector('.buttons').style.display = 'none';
+            document.getElementById('pleading-message').style.display = 'none';
+        }
+
+        function handleNo() {
+            document.body.style.background = "url('sad_thunderstorm.jpg') no-repeat center center/cover";
+
+            document.getElementById('pleading-message').innerText = pleadingMessages[messageIndex];
+            document.getElementById('pleading-message').style.display = 'block';
+            messageIndex = (messageIndex + 1) % pleadingMessages.length;
+        }
+    </script>
+</body>
+</html>
