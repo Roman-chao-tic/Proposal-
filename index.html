@@ -5,29 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Will You Be My Girlfriend?</title>
     <style>
-        @keyframes pixelated-flicker {
-            0%, 100% {
-                text-shadow: 0 0 5px #ff0000, 0 0 10px #00ff00, 0 0 15px #0000ff;
-            }
-            50% {
-                text-shadow: 0 0 10px #ffff00, 0 0 20px #ff00ff, 0 0 30px #00ffff;
-            }
-        }
-
-        @keyframes pixelate {
-            0% {
-                transform: scale(1) translateZ(0);
-                image-rendering: pixelated;
-            }
-            50% {
-                transform: scale(1.1) translateZ(0);
-                image-rendering: pixelated;
-            }
-            100% {
-                transform: scale(1) translateZ(0);
-                image-rendering: pixelated;
-            }
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
         body {
             margin: 0;
@@ -38,7 +16,7 @@
             align-items: center;
             justify-content: center;
             background: url('sunny_day.jpg') no-repeat center center/cover;
-            font-family: 'Press Start 2P', monospace; /* 8-bit style font */
+            font-family: 'Press Start 2P', cursive;
             color: #fff;
             text-align: center;
         }
@@ -49,15 +27,12 @@
             align-items: center;
         }
 
-        .message, .buttons button, #pleading-message {
-            animation: pixelate 1s infinite, pixelated-flicker 1.5s infinite;
-        }
-
         .message {
             font-size: 3rem;
             font-weight: bold;
             position: relative;
             margin-bottom: 20px;
+            animation: flicker 1.5s infinite;
         }
 
         .message span {
@@ -84,39 +59,65 @@
         }
 
         button {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             padding: 10px 20px;
             margin: 10px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-family: 'Press Start 2P', monospace;
+            background-color: #222;
+            color: #fff;
+            border: 2px solid #fff;
+            animation: blink 1s infinite alternate;
         }
 
         .yes-btn {
             background-color: #4CAF50;
-            color: white;
+            border-color: #4CAF50;
         }
 
         .no-btn {
             background-color: #f44336;
-            color: white;
+            border-color: #f44336;
         }
 
         #pleading-message {
             display: none;
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: bold;
-            color: #fff;
+            color: #000;
             margin-top: 20px;
+            animation: color-change 2s infinite;
         }
 
-        /* Ensure pixelation font */
-        @font-face {
-            font-family: 'Press Start 2P';
-            font-style: normal;
-            font-weight: 400;
-            src: url('https://fonts.gstatic.com/s/pressstart2p/v12/e3t4euGp9sgdgI98cV0KaEsZW2k4Q2eT.ttf') format('truetype');
+        @keyframes flicker {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0.6;
+            }
+        }
+
+        @keyframes color-change {
+            0% {
+                color: #000;
+            }
+            50% {
+                color: #ff0000;
+            }
+            100% {
+                color: #0000ff;
+            }
         }
     </style>
 </head>
