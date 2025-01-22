@@ -28,11 +28,11 @@
         }
 
         .message {
-            font-size: 3rem;
+            font-size: 2rem;
             font-weight: bold;
             position: relative;
             margin-bottom: 20px;
-            animation: flicker 1.5s infinite;
+            text-shadow: 2px 2px #000;
         }
 
         .message span {
@@ -68,7 +68,7 @@
             background-color: #222;
             color: #fff;
             border: 2px solid #fff;
-            animation: blink 1s infinite alternate;
+            text-shadow: 1px 1px #000;
         }
 
         .yes-btn {
@@ -83,41 +83,11 @@
 
         #pleading-message {
             display: none;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             font-weight: bold;
             color: #000;
             margin-top: 20px;
-            animation: color-change 2s infinite;
-        }
-
-        @keyframes flicker {
-            0%, 100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0.5;
-            }
-        }
-
-        @keyframes blink {
-            0% {
-                opacity: 1;
-            }
-            100% {
-                opacity: 0.6;
-            }
-        }
-
-        @keyframes color-change {
-            0% {
-                color: #000;
-            }
-            50% {
-                color: #ff0000;
-            }
-            100% {
-                color: #0000ff;
-            }
+            text-shadow: 2px 2px #fff;
         }
     </style>
 </head>
