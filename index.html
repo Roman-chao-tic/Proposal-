@@ -15,7 +15,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background: url('sunny_day.jpg') no-repeat center center/cover;
+            background: #000;
             font-family: 'Press Start 2P', cursive;
             color: #fff;
             text-align: center;
@@ -33,6 +33,7 @@
             position: relative;
             margin-bottom: 20px;
             text-shadow: 2px 2px #000;
+            animation: hover-effect 1.5s infinite;
         }
 
         .message span {
@@ -69,6 +70,7 @@
             color: #fff;
             border: 2px solid #fff;
             text-shadow: 1px 1px #000;
+            animation: hover-effect 1.5s infinite;
         }
 
         .yes-btn {
@@ -88,6 +90,16 @@
             color: #000;
             margin-top: 20px;
             text-shadow: 2px 2px #fff;
+            animation: hover-effect 1.5s infinite;
+        }
+
+        @keyframes hover-effect {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
         }
     </style>
 </head>
