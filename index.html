@@ -15,7 +15,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background: #000;
+            background: url('https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzJ2Z3VjdjI4NDZpbzM2Nzgwem9zNDRudW5pZ29lbDJrbXIyaTZ2ZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xWMPYx55WNhX136T0V/giphy.gif') no-repeat center center/cover;
             font-family: 'Press Start 2P', cursive;
             color: #fff;
             text-align: center;
@@ -132,14 +132,14 @@
         let messageIndex = 0;
 
         function handleYes() {
-            document.body.style.background = "url('rose_field.jpg') no-repeat center center/cover";
+            document.body.style.background = "url('tulip_field.jpg') no-repeat center center/cover";
             document.querySelector('.message').innerText = "I love youu hunnyyy mwahhhh 🤗😘💕🌷";
             document.querySelector('.buttons').style.display = 'none';
             document.getElementById('pleading-message').style.display = 'none';
         }
 
         function handleNo() {
-            document.body.style.background = "url('sad_thunderstorm.jpg') no-repeat center center/cover";
+            document.body.style.background = "url('https://img.wattpad.com/94192b7d7e77c39cbcf3d9959d0233b90641bdc2/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f335558695a4e5f664850474d52413d3d2d3534393733333239332e313532306263356361343933326665643733373837363832373835372e676966?s=fit') no-repeat center center/cover";
 
             document.getElementById('pleading-message').innerText = pleadingMessages[messageIndex];
             document.getElementById('pleading-message').style.display = 'block';
